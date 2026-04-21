@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node20'   // Nom configuré dans Manage Jenkins → Tools → NodeJS
+        nodejs 'node24'   // Nom configuré dans Manage Jenkins → Tools → NodeJS
     }
 
     options {
