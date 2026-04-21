@@ -1,12 +1,6 @@
 pipeline {
 
-    agent {
-        docker {
-            image 'node:20-alpine'
-            args  '-u root'
-        }
-    }
-
+    agent any
     environment {
         APP_NAME      = 'mon-app-next'
         COOLIFY_TOKEN = credentials('coolify-token')  // Jenkins Credentials → Secret Text
