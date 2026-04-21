@@ -38,7 +38,11 @@ pipeline {
             }
         }
 
-     
+        stage('Tests') {
+            steps {
+                sh 'npm test -- --ci --passWithNoTests'
+            }
+        }
 
         stage('Build') {
             steps {
