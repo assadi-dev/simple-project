@@ -43,7 +43,7 @@ pipeline {
 
         stage('Tests') {
             steps {
-                sh 'npx test -- --ci --passWithNoTests'
+                sh 'npm run test -- --ci --passWithNoTests'
             }
         }
 
