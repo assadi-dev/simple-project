@@ -1,0 +1,17 @@
+services:
+  jenkins:
+    build: .                          # Utilise le Dockerfile ci-dessus
+    container_name: jenkins-custom
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    dns:                              # Fix le bug "Jenkins appears offline"
+      - 8.8.8.8
+      - 1.1.1.1
+
+volumes:
+  jenkins_home:
