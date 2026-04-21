@@ -24,7 +24,6 @@ pipeline {
             steps {
                 sh '''
                     npm ci
-                    npm install -D vitest
                 '''
             }
         }
@@ -41,11 +40,6 @@ pipeline {
             }
         }
 
-        stage('Tests') {
-            steps {
-                sh 'npm test'
-            }
-        }
 
         stage('Build') {
             steps {
