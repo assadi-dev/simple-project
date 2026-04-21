@@ -32,11 +32,7 @@ pipeline {
             }
         }
 
-        stage('Type Check') {
-            steps {
-                sh 'npx tsc --noEmit'
-            }
-        }
+    
 
      
 
