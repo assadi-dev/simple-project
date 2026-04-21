@@ -22,7 +22,10 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'npm ci'
+                sh '''
+                    npm ci
+                    npm install -D vitest
+                '''
             }
         }
 
